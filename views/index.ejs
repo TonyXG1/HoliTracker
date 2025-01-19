@@ -1,7 +1,18 @@
 <%- include("partials/header.ejs") %>
 
 <main>
-    <h1>HoliTracker</h1>
+
+
+    <form action="/submit" method="POST">
+      <input type="hidden" name="country" id="selectedCountry"> <!-- COUNTRY -> coutryIsoCode-->
+      <input type="hidden" name="date" id="selectedDate"> <!-- DATE -> validFrom, validTo -->
+      <input type="submit" value="Get Current Date">
+    </form>
+
 </main>
+
+<script>
+
+</script>
 
 <%- include("partials/footer.ejs") %>

@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    padding-top: 5px;
+    border-top: solid #EB7001 5px;
+}
+
+.copyright{
+    color: #231D17;
+}

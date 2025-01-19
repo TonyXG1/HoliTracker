@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
     <title>HoliTracker</title>
 </head>
 <body>
-    <h1>HoliTracker</h1>
-</body>
-</html>
+    <header>
+        <div class="header">
+            <div class="header-item">
+                <a href="#"><img src="/imgs/HoliTrackerLogo.png" alt="" height="80px"></a>
+                <a href="#" class="logo-text">HoliTracker</a>
+            </div>
+            <div class="header-item">
+                <div class="nav-item">
+                    <a href="/about" type="button" class="btn nav-button">
+                        <i class="fa-solid fa-circle-info"></i> <!-- About -->
+                        About
+                    </a>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="btn dropdown-toggle nav-button" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-earth-europe"></i>
+                      Country
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item nav-button active" type="button" value="BG" onclick="selectCountry(this)">Bulgaria</button></li>
+                      <li><button class="dropdown-item nav-button" type="button" value="DE" onclick="selectCountry(this)">Germany</button></li>
+                      <li><button class="dropdown-item nav-button" type="button" value="IT" onclick="selectCountry(this)">Italy</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </header>
+
