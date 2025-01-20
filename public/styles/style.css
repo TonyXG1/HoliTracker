@@ -5,9 +5,91 @@
 
 
 }
+
 h1, .logo-text, .nav-button {
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+}
+
+.calendar-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+
+.calendar {
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #CF2F00;
+    color: white;
+}
+
+.calendar-header .month-year {
+    font-size: 18px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calendar-body {
+    padding: 20px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-days div {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.calendar-days .day-header {
+  font-weight: bold;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.calendar-days .current-day {
+    background: #CF2F00;
+    color: white;
+}
+
+.calendar-days .day {
+    cursor: pointer;
+}
+
+.calendar-days .day:hover {
+    background: #ff94746c;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.holiday-text{
+    text-align: center;
 }

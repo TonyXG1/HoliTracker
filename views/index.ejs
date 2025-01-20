@@ -1,18 +1,33 @@
 <%- include("partials/header.ejs") %>
 
 <main>
+    <div class="calendar-container">
+      <div class="calendar">
+        <div class="calendar-header">
+          <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+          <div class="month-year" id="month-year"></div>
+          <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-days" id="calendar-days"></div>
+        </div>
+      </div>
+    </div>
 
+    <div class="button-container">
+      <form action="/submit" method="POST">
+        <input type="hidden" name="country" id="selectedCountry"> <!-- COUNTRY -> coutryIsoCode-->
+        <input type="hidden" name="date" id="selectedDate"> <!-- DATE -> validFrom, validTo -->
+        <input type="submit" value="Get Current Date">
+      </form>
+    </div>
 
-    <form action="/submit" method="POST">
-      <input type="hidden" name="country" id="selectedCountry"> <!-- COUNTRY -> coutryIsoCode-->
-      <input type="hidden" name="date" id="selectedDate"> <!-- DATE -> validFrom, validTo -->
-      <input type="submit" value="Get Current Date">
-    </form>
-
+    <% if(!locals.holidayEn || !locals.holidayCountry) { %>
+    <h1>Please select all fields</h1>
+    <% } else {%>
+      <h1 class="holiday-text"><%= holidayEn %></h1>
+      <h1 class="holiday-text"><%= holidayCountry %></h1>
+    <% } %>
 </main>
-
-<script>
-
-</script>
 
 <%- include("partials/footer.ejs") %>
