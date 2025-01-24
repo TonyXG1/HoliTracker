@@ -1,13 +1,13 @@
-.header {
+  .header {
     display: flex;
     justify-content: space-between;
     overflow: visible;
     background-color: lightgray;
     padding: 20px 10px;
     border-bottom: solid #EB7001 5px;
+    height: 100px;
   }
   
-  /* Style the header links */
   .header .nav-button {
     float: left;
     color: black;
@@ -51,7 +51,10 @@
     background-color: #EB7001 !important;
   }
 
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .logo-img{
+    height: 80px;
+  }
+
   .logo-text {
     font-size: 50px;
     font-weight: bold;
@@ -62,13 +65,75 @@
   /* Style the active/current link*/
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
+
+  @media (min-width: 600px) and (max-width: 800px) {
+    .logo-img{
+      height: 60px;
+    }
+    .logo-text{
+      font-size: 40px;
+    }
+    .nav-button{
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+    .nav-item {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+  .header {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center;
+      height: auto;
+  }
+  .header-item {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      width: 100%;
+  }
+  .logo-img {
+      height: 50px;
+  }
+  .logo-text {
+      font-size: 30px;
+  }
+  .nav-item, 
+  .nav-button {
+      font-size: 14px;
+      padding: 10px;
+      width: 100%; /* Make buttons full-width for easier tapping */
+  }
+  .nav-button {
+      text-align: center;
       display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
+  }
+  /* CALENDAR */
+  .calendar{
+    width: 400px;
+  }
+  .calendar-header{
+    padding: 5px 10px;
+  }
+  .calendar-body{
+    padding: 10px;
+  }
+  .calendar-header .month-year {
+    font-size: 14px;
+  }
+
+  #submit-button{
+    border: 3px solid #CF2F00;
+    background-color: #EB7001;
+    color: white;
+    font-family: "Quicksand", serif;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+  footer{
+    visibility: hidden;
+  }
   }
